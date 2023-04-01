@@ -1,0 +1,245 @@
+@import "../styles/variables.scss";
+@import "./components/homepage/HomeBanner.scss";
+@import "./components/homepage/PurchaseBrand.scss";
+@import "./components/homepage/HowToBuy.scss";
+@import "./components/homepage/HomeCommonHeaders.scss";
+@import "./components/homepage/HowItWorks.scss";
+@import "./components/homepage/ReadyToNext.scss";
+@import "./components/homepage/FrequentlyQuestions.scss";
+@import "./components/common/Navbar.scss";
+@import "./components/common/Buttons.scss";
+@import "./components/common/Footer.scss";
+@import "./components/privacypage/PrivacyPolicyCookie.scss";
+
+@font-face {
+	font-family: "light";
+	src: url("../public/fonts/HyundaiSansTextOffice-Regular.ttf");
+	font-display: swap;
+}
+@font-face {
+	font-family: "bold";
+	src: url("../public/fonts/HyundaiSansHeadOffice-Bold.ttf");
+	font-display: swap;
+}
+
+.bold {
+	font-family: "bold";
+}
+.light {
+	font-family: "light";
+}
+
+@keyframes fade-and-slide-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes make-full-width {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+@keyframes animateDown {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+	40% {
+		transform: translate(-50%, 5px);
+	}
+	60% {
+		transform: translate(-50%, 3px);
+	}
+}
+html,
+body {
+	overscroll-behavior-y: none;
+	-webkit-overflow-scrolling: touch;
+	scroll-behavior: smooth;
+	& *::-webkit-scrollbar {
+		display: none;
+	}
+	font-family: "light";
+}
+html,
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	-webkit-tap-highlight-color: transparent;
+	overflow-x: hidden;
+}
+
+body.no-scroll {
+	position: fixed;
+	overflow: hidden;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.1;
+}
+p,
+a,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+button:disabled {
+	pointer-events: none;
+	background: rgb(164, 165, 166) !important;
+	border-color: rgb(164, 165, 166) !important;
+}
+h6 {
+	font-size: 1rem;
+}
+h2 {
+	font-size: 1.625rem;
+	line-height: 1.25;
+}
+p {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+.swiper-button-next-custom,
+.swiper-button-prev-custom {
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 50%;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	&::after {
+		content: "";
+		background-image: url("/icons/arrow-prev-blue.svg");
+		width: 45%;
+		height: 45%;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+.swiper-button-next-custom {
+	&::after {
+		transform: scaleX(-1);
+	}
+}
+.Toastify__toast-container {
+	top: calc($navbar-hight-mobile + 1rem) !important;
+	right: unset !important;
+	width: calc(100% - $padding-inline-mobile) !important;
+	left: $padding-inline-mobile / 2 !important;
+	.Toastify__toast {
+		min-height: unset !important;
+		height: 3rem !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		margin-bottom: 1rem !important;
+		position: relative;
+		font-size: 1rem;
+		color: white;
+		transition: 0.25s all;
+		&.Toastify__toast--error {
+			background-color: #e80710;
+		}
+		&.Toastify__toast--success {
+			background-color: #0559f7;
+			color: white;
+		}
+		.Toastify__progress-bar {
+			height: 0 !important;
+			opacity: 0;
+		}
+		.Toastify__toast-icon {
+			display: none;
+		}
+		.Toastify__toast-body {
+			margin: 0;
+			width: 100%;
+			padding: 0;
+			padding-inline-start: 1rem;
+		}
+		button {
+			position: absolute;
+			right: 1rem;
+			top: 1rem;
+			opacity: 1;
+			svg {
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1024px) {
+	html {
+		font-size: 14px;
+		// font-size: 12px;
+	}
+	body.no-scroll {
+		height: 100vh;
+		overflow: hidden;
+	}
+	h2 {
+		font-size: 2.5rem;
+	}
+	.Toastify__toast-container {
+		top: calc($navbar-hight-desktop + 2rem) !important;
+		right: 2rem !important;
+		left: unset !important;
+		width: 30rem !important;
+	}
+}
+
+@media (min-width: 1279px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 1440px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1680px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+// @media (min-width: 1900px) {
+// 	html {
+// 		font-size: 18px;
+// 	}
+// }

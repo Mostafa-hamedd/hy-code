@@ -1,0 +1,47 @@
+{
+    "headers": {
+        "default_title": "Click To Buy | Online Car Dealership | Hyundai"
+    },
+    "common": {
+        "get_start":"Get Start"
+    },
+    "navbar": {
+        "eng":"Eng",
+        "language":"Language...",
+        "english":"English",
+        "arabic":"Arabic",
+        "homepage":"Homepage",
+        "vehicles":"Vehicles",
+        "myVehicle":"My Vehicles",
+        "account":"Account",
+        "login":"Log-In",
+        "utility":"Utility",
+        "book_testDrive":"Book Your Test-Drive",
+        "book_Showroom":"Book Your Showroom Visit",
+        "book_Service":"Book Your Service"
+
+    },
+    "footer":{
+        "salwa_road":"Salwa Road Main Showroom",
+        "time":"Sat-Thu: 9:00 AM to 2:00 PM and\n8:30 PM to 12:30 AM\nFri: 8:30 PM to 12:30 PM",
+        "subscribe_to":"Subscribe to our latest offers",
+        "subscribe":"Subscribe",
+        "your_email":"Your Email",
+        "i_agree":"I agree terms and conditions.",
+        "privacy_policy":"Privacy Policy",
+        "terms":"Terms of Us",
+        "report":"Report an issue",
+        "sitemap":"Sitemap",
+        "copyright":"© Copyright Skyline Automotive. All rights reserved",
+        "email_required":"This field is required.",
+        "email_incorrect":"Incorrect email format!",
+        "toast_error":"You must accept the terms and conditions",
+        "toast_success":"Thank you for your subscription",
+        "number":"8000 231"
+
+    },
+    "banner":{
+        "shop_select":"Shop. Select. Buy. All from home",
+        "Learn_more":"Learn more"
+    }
+}

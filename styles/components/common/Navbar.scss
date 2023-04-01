@@ -1,0 +1,224 @@
+.main-nav {
+	position: fixed;
+	z-index: 50;
+	border-bottom: 1px solid $nav-border;
+	height: $navbar-hight-mobile;
+	width: 100%;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: $padding-inline-mobile;
+	.logo-container {
+		position: relative;
+		width: 10.5rem;
+		height: 2rem;
+	}
+	.lang-container {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		.lang-switcher {
+			font-size: 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			position: relative;
+			svg {
+				margin-inline-start: 0.25rem;
+				transform: rotate(90deg);
+				transition: 0.15s all;
+				&.rotate {
+					transform: rotate(270deg);
+				}
+			}
+			.drop-down {
+				position: absolute;
+				width: 10rem;
+				background-color: white;
+				top: 2rem;
+				right: -2rem;
+				border: 1px solid $nav-border;
+				display: flex;
+				flex-direction: column;
+				span {
+					padding: 0.75rem 1.5rem;
+					cursor: pointer;
+					&:hover:not(:first-child) {
+						background-color: $secondary-blue-color;
+						color: white;
+					}
+					&:first-child {
+						cursor: unset;
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+		img {
+			cursor: pointer;
+		}
+		.menu-icon {
+			cursor: pointer;
+			svg {
+				margin-top: 0.25rem;
+			}
+		}
+	}
+}
+.menu-container {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	z-index: 1000;
+	padding: 6rem 0 0;
+	.lists {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow: auto;
+		.list-container {
+			display: flex;
+			align-items: center;
+			border-bottom: 1px dashed #999;
+			width: 85%;
+			padding-bottom: 2rem;
+			ul {
+				list-style: none;
+				li {
+					padding: 0.75rem 0;
+					font-size: 1.5rem;
+					cursor: pointer;
+				}
+			}
+		}
+		.booking-container {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			gap: 1.5rem;
+			padding-top: 3rem;
+			width: 85%;
+			span {
+				opacity: 0.7;
+			}
+			ul {
+				list-style: none;
+				font-size: 1.25rem;
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				li {
+					.circle {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.close-icon {
+		position: fixed;
+		right: 2rem;
+		top: 2rem;
+		cursor: pointer;
+	}
+}
+@media (orientation: landscape) {
+	.menu-container {
+		padding: 3rem 0 0;
+	}
+}
+@media (min-width: 1024px) {
+	.main-nav {
+		height: $navbar-hight-desktop;
+		padding-inline: $padding-inline-desktop;
+		.logo-container {
+			width: 18.75rem;
+			height: 1.5rem;
+		}
+	}
+	.menu-container {
+		padding: 3.33rem 6rem;
+		.lists {
+			flex-direction: row;
+			overflow: hidden;
+			.list-container {
+				height: 100%;
+				width: 91%;
+				padding-inline-end: 10%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-right: 1px dashed #999;
+				border-bottom: none;
+				margin: 1rem 0;
+				padding-bottom: 0;
+				ul {
+					list-style: none;
+					li {
+						padding: 1rem;
+						font-size: 2.5rem;
+						cursor: pointer;
+						width: fit-content;
+						&:hover {
+							color: white;
+							background-color: #000;
+						}
+					}
+				}
+			}
+			.booking-container {
+				height: 100%;
+				width: 46%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				padding-inline-start: 4.5rem;
+				gap: 2rem;
+				padding-top: 2rem;
+				span {
+					opacity: 0.7;
+					font-size: 0.875rem;
+				}
+				ul {
+					list-style: none;
+					font-size: 1.375rem;
+					display: flex;
+					flex-direction: column;
+					gap: 1.5rem;
+					li {
+						cursor: pointer;
+						display: flex;
+						gap: 1rem;
+						&:hover {
+							color: $secondary-blue-color;
+							.circle {
+								display: flex;
+								background-color: $secondary-blue-color;
+								width: 1.5rem;
+								height: 1.5rem;
+								border-radius: 100%;
+								justify-content: center;
+								align-items: center;
+								svg {
+									transform: translate(-0.05rem, -0.05rem);
+									path {
+										transform: scale(1.25);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.close-icon {
+			right: 3.75rem;
+			top: 2.5rem;
+		}
+	}
+}

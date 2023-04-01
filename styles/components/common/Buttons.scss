@@ -1,0 +1,19 @@
+.button-container {
+	background-color: $primary-blue-color;
+	height: 3.75rem;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    color: white;
+    text-transform: capitalize;
+	font-size: 1.375rem;
+}
+@media (min-width: 1024px) {
+	.button-container {
+		cursor: pointer;
+		&:hover{
+			background-color: $dark-blue-color;
+		}
+	}
+
+}

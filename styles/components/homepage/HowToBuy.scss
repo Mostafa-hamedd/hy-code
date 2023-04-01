@@ -1,0 +1,57 @@
+.how-to-buy {
+	padding: 0 $padding-inline-mobile;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	.header-title {
+		margin-bottom: 2.5rem;
+	}
+	.header-desc {
+		margin-bottom: 2rem;
+	}
+	.cards-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+		.how-to-buy-card {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 1.5rem;
+			padding: 2rem;
+			width: 100%;
+			background: #f4f4f4;
+			h3 {
+				font-size: 1.25rem;
+			}
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.how-to-buy {
+		padding: 0 $padding-inline-desktop;
+		.header-desc {
+			width: 45%;
+		}
+		.cards-container {
+			flex-direction: row;
+			gap: 1.875rem;
+			.how-to-buy-card {
+				width: 32%;
+				gap: 1.5rem;
+				padding: 2.813rem;
+				height: 27.375rem;
+                justify-content: flex-start;
+				h3 {
+					font-size: 1.375rem;
+				}
+			}
+		}
+	}
+}

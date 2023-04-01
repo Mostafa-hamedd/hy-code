@@ -1,0 +1,28 @@
+.purchase-container {
+	padding: $sections-space-mobile $padding-inline-mobile;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	h2 {
+		margin-bottom: 2.5rem;
+	}
+	p {
+		margin-bottom: 2rem;
+	}
+	.button-container {
+		width: 100%;
+	}
+}
+@media (min-width: 1024px) {
+	.purchase-container {
+		padding: $sections-space-desktop $padding-inline-desktop;
+		p {
+			width: 45%;
+		}
+		.button-container {
+			width: 21.75rem;
+		}
+	}
+}

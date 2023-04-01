@@ -1,0 +1,239 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	border-top: 1px solid #d9d9d9;
+	padding: 0 $padding-inline-mobile;
+	> div {
+		padding: calc($sections-space-mobile / 2) 0;
+		border-bottom: 1px dashed #d9d9d9;
+	}
+	.logos-container {
+		.main-logo {
+			position: relative;
+			width: 8.375rem;
+			height: 1.165rem;
+			&.sub-logo {
+				height: 2.88rem;
+				margin-top: 2.25rem;
+			}
+		}
+	}
+	.contact-data-container {
+		.map {
+			display: flex;
+			gap: 1rem;
+			.data {
+				h6 {
+					font-size: 1rem;
+					color: $dark-blue-color;
+				}
+				white-space: pre-wrap;
+			}
+			margin-bottom: 1rem;
+			&:last-child {
+				margin-bottom: 0;
+				align-items: center;
+			}
+		}
+	}
+	.copy-rights-container {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		ul {
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			color: $dark-blue-color;
+			font-weight: bold;
+		}
+		.icons img {
+			margin-inline-end: 1rem;
+		}
+		p {
+			font-size: 0.875rem;
+			color: #999;
+		}
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		margin-top: 0.75rem;
+		button {
+			border: none;
+			padding: 0;
+			margin: 0;
+			.button-container {
+				font-size: 1rem;
+			}
+		}
+		.input-group {
+			position: relative;
+			&.checkbox {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+			.input-error {
+				transition: 0.25s all;
+				line-height: 1.25;
+				color: red;
+				font-size: 0.875rem;
+				margin-top: 0.25rem;
+			}
+			.form-input {
+				height: 3rem;
+				width: 100%;
+				border-radius: 0;
+				outline: none;
+				padding: 0.875rem 0.75rem;
+				border: 1px solid #d9d9d9;
+				position: relative;
+				&::placeholder {
+					opacity: 0.5;
+				}
+				&:focus-visible {
+					border: 1px solid black;
+				}
+				&.error {
+					border: 1px solid red;
+				}
+			}
+			.ErrorIcon {
+				position: absolute;
+				top: 0.875rem;
+				right: 0.375rem;
+			}
+			input[type="checkbox"] {
+				width: 1.25rem;
+				height: 1.25rem;
+				position: absolute;
+				opacity: 0;
+				&:checked + .custom-check {
+					border: 1px solid #0559f7;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					svg {
+						display: flex;
+					}
+				}
+			}
+			.custom-check {
+				width: 1.25rem;
+				height: 1.25rem;
+				border: 1px solid #d9d9d9;
+				transition: 0.25s all;
+				svg {
+					display: none;
+				}
+			}
+		}
+		.button-desktop {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.footer {
+		padding: calc($sections-space-desktop / 2) $padding-inline-desktop 1.25rem;
+		flex-direction: row;
+		// justify-content: space-between;
+		> div {
+			padding: 0;
+			border-bottom: 0;
+			border-left: 1px dashed #d9d9d9;
+			padding-inline: 1.75rem;
+			&:first-child {
+				border-left: none;
+				padding-inline: 0 2.25rem;
+			}
+			&:last-child {
+				padding-inline: 2.25rem 0;
+			}
+		}
+		.logos-container {
+			padding-inline-end: 2.25rem;
+			.main-logo {
+				width: 13.625rem;
+				height: 1.896rem;
+				&.sub-logo {
+					height: 4.684rem;
+				}
+			}
+		}
+		.contact-data-container {
+			a {
+				width: fit-content;
+				cursor: unset;
+			}
+			.map {
+				width: fit-content;
+				h6 {
+					cursor: pointer;
+				}
+				h6:hover {
+					color: #0559f7;
+					text-decoration: underline;
+				}
+				&:last-child {
+					cursor: pointer;
+					&:hover {
+						color: #0559f7;
+					}
+				}
+			}
+		}
+		form {
+			.input-desktop {
+				display: flex;
+				width: 100%;
+				gap: 0.25rem;
+				.form-input {
+					width: 14.25rem;
+				}
+			}
+			.button-desktop {
+				display: flex;
+				width: fit-content;
+				.button-container {
+					width: 7rem;
+					height: 3rem;
+				}
+			}
+			.button-mobile {
+				display: none;
+			}
+			.input-group {
+				&.checkbox {
+					margin-top: 1rem;
+					.custom-check {
+						cursor: pointer;
+						position: relative;
+					}
+				}
+				.ErrorIcon {
+					position: absolute;
+					right: 7.25rem;
+				}
+			}
+		}
+		.copy-rights-container {
+			width: 21%;
+			ul {
+				gap: 0.25rem;
+				align-items: flex-end;
+				li {
+					cursor: pointer;
+					&:hover {
+						color: #0559f7;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
